@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
     @conversation_partner = Message.first.author_name
+    @my_name = Message.last.author_name
 
     @message = Message.new
   end
