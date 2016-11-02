@@ -1,0 +1,23 @@
+<div id="form">
+
+  <%= form_for(@message) do |f| %>
+    <ul>
+    <% @message.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+    </ul>
+    <div class="message-form">
+      <%#= f.label :body, :value => "Message"  %><br />
+      <%= f.text_area :body, :autofocus => true, class: "message-form-input" %>
+    </div>
+    <div class="button-form">
+      <%= f.submit "Send", class: "button-form-input"  %>
+    </div>
+    <div class="author-form">
+      <%= f.label :author_name, :value => "Your name is" %><br />
+      <%= f.text_field :author_name, :value => "Bert", class: "author-form-input" %>
+    </div>
+
+  <% end %>
+
+</div>

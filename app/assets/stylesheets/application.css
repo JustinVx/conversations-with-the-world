@@ -13,3 +13,160 @@
  *= require_tree .
  *= require_self
  */
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+ @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700,400,300);
+
+body {
+  font-family: 'Open Sans';
+  margin: 0 20px;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font: 300 30px 'Roboto Condensed', sans-serif;
+  margin: 42px 0 0 0;
+  text-align: center;
+}
+
+#messages {
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+.message-block {
+  float: none;
+  padding: 20px 20px;
+  margin: 30px 0;
+}
+
+.author-left {
+  float: left;
+  font: 300 18px 'Roboto Condensed', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 10px;
+  margin-top: 32px;
+}
+
+.author-right {
+  float: right;
+  font: 300 18px 'Roboto Condensed', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-top: 32px;
+}
+
+.message-text {
+  padding: 12px 12px;
+  font: 24px 'Open Sans', sans-serif;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.right-side {
+  position: absolute;
+  right: 70px;
+  width: 0px;
+  height: 0px;
+  border-top: 25px solid white;
+  border-left: 30px solid transparent;
+}
+
+.left-side {
+  position: absolute;
+  left: 60px;
+  width: 0px;
+  height: 0px;
+  border-top: 25px solid white;
+  border-right: 30px solid transparent;
+}
+
+.delete {
+  background-color: black;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  margin-top: 6px;
+  right: 45px;
+  color: white;
+  border-radius: 50%;
+}
+
+.delete:hover {
+  background-color: red;
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+
+.delete a {
+  color: white;
+  text-decoration: none;
+}
+
+#form {
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.author-form {
+  display: inline-block;
+  height: 150px;
+  width: 120px;
+}
+
+.author-form-input {
+  padding: 8px;
+  width: 100px;
+  vertical-align: top;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+}
+
+.message-form {
+  display: inline-block;
+  vertical-align: top;
+  width: 96%;
+}
+
+.message-form-input {
+  font: 20px 'Open Sans', sans-serif;
+  padding: 8px;
+  width: 100%;
+  height: 130px;
+  vertical-align: top;
+  border-radius: 10px;
+  border: 0;
+}
+
+.button-form {
+  right: 50px;
+  margin-top: 20px;
+  display: block;
+  position: absolute;
+  width: 150px;
+}
+
+input {
+  font: 20px 'Open Sans', sans-serif;
+}
+
+.button-form-input {
+  padding: 8px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 150px;
+}
+
+.button-form-input:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.6s ease;
+}
