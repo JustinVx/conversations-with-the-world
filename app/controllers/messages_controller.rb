@@ -3,8 +3,13 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.all
-    @conversation_partner = Message.first.author_name
-    @my_name = Message.last.author_name
+    if Message.first
+      @conversation_partner = Message.first.author_name
+      @my_name = Message.last.author_name
+    else
+      @conversation_partner = "Johan"
+      @my_name = "Bert"
+    end
 
     @message = Message.new
   end
